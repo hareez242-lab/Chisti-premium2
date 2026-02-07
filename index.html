@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHISTI PREMIUM | Official Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS: Design and Layout */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #000, #1a1a1a);
+            color: #d4af37;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        .logo {
+            font-size: 65px; 
+            font-weight: bold;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.5);
+        }
+
+        .slogan {
+            font-style: italic;
+            font-size: 20px;
+            color: #fff;
+            letter-spacing: 3px;
+            margin-top: 15px;
+        }
+
+        .search-container {
+            margin-top: 30px;
+        }
+
+        #searchInput {
+            width: 60%;
+            padding: 15px;
+            border-radius: 30px;
+            border: 2px solid #d4af37;
+            background: #fff;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .about-section, .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fff;
+            max-width: 900px;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #000;
+            border-bottom: 3px solid #d4af37;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-item i {
+            font-size: 24px;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            margin: 25px;
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.4s ease;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #000;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            padding: 15px;
+            width: 100%;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        footer {
+            background: #000;
+            color: #d4af37;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">CHISTI PREMIUM</h1>
+        <p class="slogan">Timeless Elegance, Crafted for You</p>
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchProduct()" placeholder="Search for luxury items...">
+        </div>
+    </header>
+
+    <section class="about-section">
+        <h2>About Chisti Premium</h2>
+        <p>Chisti Premium is Pakistan's premier destination for luxury. We curate the world's most exquisite timepieces and high-end eyewear for those who appreciate true craftsmanship.</p>
+    </section>
+
+    <div class="container" id="productContainer">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Royal Chronograph">
+            <h3>Royal Chronograph</h3>
+            <p class="price">Rs. 85,000</p>
+            <button onclick="orderNow('Royal Chronograph')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400" alt="Classic Aviators">
+            <h3>Classic Aviators</h3>
+            <p class="price">Rs. 32,000</p>
+            <button onclick="orderNow('Classic Aviators')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=400" alt="Gold Heritage Watch">
+            <h3>Gold Heritage</h3>
+            <p class="price">Rs. 245,000</p>
+            <button onclick="orderNow('Gold Heritage')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1511499767390-90342f16b147?w=400" alt="Ocean Wayfarer">
+            <h3>Ocean Wayfarer</h3>
+            <p class="price">Rs. 38,500</p>
+            <button onclick="orderNow('Ocean Wayfarer')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=400" alt="Sport Stealth Watch">
+            <h3>Sport Stealth</h3>
+            <p class="price">Rs. 55,000</p>
+            <button onclick="orderNow('Sport Stealth')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?w=400" alt="Azure Sky Shades">
+            <h3>Azure Sky Shades</h3>
+            <p class="price">Rs. 26,000</p>
+            <button onclick="orderNow('Azure Sky Shades')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=400" alt="Midnight Clubmaster">
+            <h3>Midnight Clubmaster</h3>
+            <p class="price">Rs. 45,000</p>
+            <button onclick="orderNow('Midnight Clubmaster')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=400" alt="Rose Gold Master">
+            <h3>Rose Gold Master</h3>
+            <p class="price">Rs. 195,000</p>
+            <button onclick="orderNow('Rose Gold Master')">Order Now</button>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Address:</strong><br>Street 123, Luxury District, Karachi, Pakistan</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <p><strong>Contact:</strong><br>+155 42230962</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong><br>chistipremium@xyz.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CHISTI PREMIUM OFFICIAL | Karachi, Pakistan</p>
+        <p style="font-size: 12px; margin-top: 10px; color: #777;">Luxury Redefined.</p>
+    </footer>
+
+    <script>
+        function orderNow(itemName) {
+            alert("Shukriya! Your order for " + itemName + " has been recorded. Our Chisti Premium team will call you shortly for delivery.");
+        }
+
+        function searchProduct() {
+            let input = document.getElementById('searchInput').value.toUpperCase();
+            let cards = document.getElementsByClassName('product-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0];
+                if (title.innerText.toUpperCase().indexOf(input) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
